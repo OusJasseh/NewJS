@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="Ousman Jasseh">
+   <title></title>
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+
+
+</head>
+<body>
+   
+<div class="container justify-content-center d-flex mt-5" >
+    <div class="col-6">
+        <form id="formContact" novalidate>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control need-validation" id="contactForm-firstName" required placeholder="firstName">
+                <label  for="contactForm-firstName">Ditt Namn...</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control need-validation" id="contactForm-email" required placeholder="namn@exempel.se">
+                <label for="contactForm-email">Din E-postadress...</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <textarea class="form-control need-validation"  id="contactForm-message" required placeholder="Skriv ditt meddelande här"></textarea>
+                <label for="contactForm-message">Meddelande</label>
+            </div>
+
+            <div class="form-check mt-3">
+                <input class="form-check-input " type="checkbox" value="ickegodkänd" id="flexCheckChecked">
+                <label class="form-check-label" for="godkänd">Jag har läst de allmänna avtalsvillkoren och godkänner detta.</label>
+            </div>
+
+            <div class="d-grid">
+                <button class="btn btn-secondary mt-3">SKICKA</button>
+            </div>
+            
+        
+            </form>
+    </div>
+</div>
+   
+   <script src="https://kit.fontawesome.com/124ac6c2b5.js" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+   <script src="script.js"></script>
+   <link rel="stylesheet" href="script.css">
+</body>
+</html>
