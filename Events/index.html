@@ -22,14 +22,24 @@
                 <form id="ContactForm">
                     <div class="mb-3">
                             <input id="name" class="form-control" type="text" placeholder="Ditt namn...">
-                            <div id="error-name" class="text-danger ms-3" style="font-size: 0.8rem;"></div>
+                            <div id="error-name" class="text-danger mt-1 ms-2" style="font-size: 0.8rem;"></div>
                     </div>
                     <div class="mb-3">
-                            <input id="email" class="form-control" type="text" placeholder="Din e-postadress...">
-                            <div id="error-email" class="text-danger ms-3" style="font-size: 0.8rem;"></div>
+                            <input id="email" class="form-control" type="email" placeholder="Din e-postadress...">
+                            <div id="error-email" class="text-danger mt-1 ms-3" style="font-size: 0.8rem;"></div>
+                    </div>
+
+                    <div class="mb-3">
+                            <input id="password" class="form-control" type="password" placeholder="Din Lösenord...">
+                            <div id="error-password" class="text-danger mt-1 ms-3" style="font-size: 0.8rem;"></div>
+                    </div>
+
+                    <div class="mb-3">
+                            <textarea id="message" class="form-control" style="resize: none; height: 200px;" placeholder="Meddelande..."></textarea>
+                            <div id="error-message" class="text-danger mt-1 ms-3" style="font-size: 0.8rem;"></div>
                     </div>
                         
-                        <textarea id="body" class="form-control  mb-3" style="resize: none; height: 200px;" placeholder="Meddelande..."></textarea>
+                        
                         <button class="btn btn-secondary" type="submit">SKICKA IN</button>
                 </form>
             </div>
