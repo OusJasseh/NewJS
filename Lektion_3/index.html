@@ -18,20 +18,25 @@
    
 <div class="container justify-content-center d-flex mt-5" >
     <div class="col-6">
-        <form id="formContact" novalidate>
+        <form id="formContact" onsubmit="onSubmit(event)" novalidate>
             <div class="form-floating mb-3">
                 <input type="text" class="form-control need-validation" id="contactForm-firstName" required placeholder="firstName">
                 <label  for="contactForm-firstName">Ditt Namn...</label>
+            <div id="contactForm-firstName-error" class="invalid-feedback"><small>du måste ange ett Namn</small> </div>
             </div>
 
             <div class="form-floating mb-3">
                 <input type="email" class="form-control need-validation" id="contactForm-email" required placeholder="namn@exempel.se">
                 <label for="contactForm-email">Din E-postadress...</label>
+                <div id="contactForm-email-error" type="email" class="invalid-feedback"><small>du måste ange ett giltig E-postadress</small> </div>
+
             </div>
 
             <div class="form-floating mb-3">
                 <textarea class="form-control need-validation"  id="contactForm-message" required placeholder="Skriv ditt meddelande här"></textarea>
                 <label for="contactForm-message">Meddelande</label>
+                <div id="contactForm-email-message" type="text" class="invalid-feedback"><small>Ditt medellande måste vara minst 5 tecken lång.</small> </div>
+
             </div>
 
             <div class="form-check mt-3">
@@ -40,7 +45,7 @@
             </div>
 
             <div class="d-grid">
-                <button class="btn btn-secondary mt-3">SKICKA</button>
+                <button id="contactFormSubmit" class="btn btn-secondary mt-3">SKICKA</button>
             </div>
             
         

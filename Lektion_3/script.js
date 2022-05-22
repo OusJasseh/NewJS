@@ -21,45 +21,96 @@ function valieEmail(value) {
         return false
      else
         return true
+}
+
+    function checkValidForm(elements){
+        let disable = false
+        elements.forEach(element => {
+            if(element.value === "")
+                disable = true
+                 
+        })
+        document.getElementById("contactFormSubmit").disabled = disable
     }
 
   var forms = document.querySelectorAll('.need-validation')
+
+  checkValidForm(forms)
   
   forms.forEach(element =>{
       
     switch(element.type) {
         case "text":
             element.addEventListener("keyup", function(e) {
-                if(!validMinValue(e.target.value))
+                if(!validMinValue(e.target.value)) {
                     e.target.classList.add("is-invalid");
-                else
+                    document.getElementById(`${e.target.id}-error`).style.display = "block"
+            }
+        
+                else {
                     e.target.classList.remove("is-invalid");
+                    document.getElementById(`${e.target.id}-error`).style.display = "none"
+                }   
+                    
             })
               break;
 
         case "email":
-            element.addEventListener("keyup", function(event){ 
+         
                 element.addEventListener("keyup", function(e) {
                 
-                    if(!valieEmail(e.target.value))
-                        e.target.classList.add("is-invalid");
-                    else
-                        e.target.classList.remove("is-invalid");
+                if(!valieEmail(e.target.value)) {
+                    e.target.classList.add("is-invalid");
+                    document.getElementById(`${e.target.id}-error`).style.display = "block"
+            }
+        
+                else {
+                    e.target.classList.remove("is-invalid");
+                    document.getElementById(`${e.target.id}-error`).style.display = "none"
+                }   
+                  
                 })
-            })    
+                
                 break;
 
         case "textarea":
            
             element.addEventListener("keyup", function(e) {
                 
-                if(!validMinValue(e.target.value, 6))
-                    e.target.classList.add("is-invalid");
-                else
+                if(!validMinValue(e.target.value, 5)) {
+                e.target.classList.add("is-invalid");
+                    document.getElementById(`${e.target.id}-error`).display = "block"
+            }
+                else {
                     e.target.classList.remove("is-invalid");
-                
-    
-  })
+                    document.getElementById(`${e.target.id}-error`).display = "none"
+                }          
+        })    
     break;
+    }
+})
+
+function onSubmit(e) {
+    e.preventDefault()
+
+    for(let element of e.target)
+        switch(element.type){
+            case "text":
+               
+                if(!validMinValue(element.value)) {
+                    element.classList.add("is-invalid");
+                    document.getElementById(`${element.id}-error`).style.display = "block"
+            }
+        
+                else {
+                    element.classList.remove("is-invalid");
+                    document.getElementById(`${element.id}-error`).style.display = "none"
+                   
+                    
+            }
+              break;
+        }
 }
-  })
+
+
+
