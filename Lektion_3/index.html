@@ -9,7 +9,7 @@
    <meta name="author" content="Ousman Jasseh">
    <title></title>
    
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+   
     
 
 
@@ -18,24 +18,24 @@
    
 <div class="container justify-content-center d-flex mt-5" >
     <div class="col-6">
-        <form id="formContact" onsubmit="onSubmit(event)" novalidate>
+        <form id="contactForm" onsubmit="onSubmit(event)" novalidate>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control need-validation" id="contactForm-firstName" required placeholder="firstName">
-                <label  for="contactForm-firstName">Ditt Namn...</label>
-            <div id="contactForm-firstName-error" class="invalid-feedback"><small>du måste ange ett Namn</small> </div>
+                <input type="text" class="form-control needs-validation" id="contactForm-Name" required placeholder="Name">
+                <label  for="contactForm-Name">Ditt Namn...</label>
+            <div id="contactForm-Name-error" class="invalid-feedback"><small>Du måste ange ett giltigt namn.</small> </div>
             </div>
 
             <div class="form-floating mb-3">
-                <input type="email" class="form-control need-validation" id="contactForm-email" required placeholder="namn@exempel.se">
-                <label for="contactForm-email">Din E-postadress...</label>
-                <div id="contactForm-email-error" type="email" class="invalid-feedback"><small>du måste ange ett giltig E-postadress</small> </div>
+                <input type="email" class="form-control needs-validation" id="contactForm-email" required placeholder="namn@exempel.se">
+                <label for="contactForm-email">Din e-postadress...</label>
+                <div id="contactForm-email-error" type="email" class="invalid-feedback"><small>Du måste ange ett giltig e-postadress</small> </div>
 
             </div>
 
             <div class="form-floating mb-3">
-                <textarea class="form-control need-validation"  id="contactForm-message" required placeholder="Skriv ditt meddelande här"></textarea>
+                <textarea class="form-control needs-validation"  id="contactForm-message" required placeholder="Skriv ditt meddelande här"></textarea>
                 <label for="contactForm-message">Meddelande</label>
-                <div id="contactForm-email-message" type="text" class="invalid-feedback"><small>Ditt medellande måste vara minst 5 tecken lång.</small> </div>
+                <div id="contactForm-message-error" type="text" class="invalid-feedback"><small>Ditt medellande måste vara minst 5 tecken lång.</small> </div>
 
             </div>
 
@@ -53,8 +53,10 @@
     </div>
 </div>
    
-   <script src="https://kit.fontawesome.com/124ac6c2b5.js" crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+   
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
    <script src="script.js"></script>
    <link rel="stylesheet" href="script.css">
 </body>
